@@ -28,3 +28,16 @@ int main(int argc, char *argv[])
     imshow("converted",img);
     waitKey(0);
 }
+
+
+/*
+For grayscale, there is only one channel, so
+----------------------------------------------
+fot(int i=0; i<image.rows;i++){
+    for (int j=0; j<image.cols; j++){
+        if(image.at<uchar>(i,j)>200){
+            image.at<uchar>(i,j)=0;
+        }
+    }
+}
+*/
