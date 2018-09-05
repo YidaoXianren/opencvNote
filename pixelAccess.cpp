@@ -1,4 +1,4 @@
-//Access pixel values in images
+//Access pixel values in images - convert b & w
 #include <iostream>
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
@@ -15,11 +15,11 @@ int main(int argc, char *argv[])
     waitKey(0);
 
     for(int i=0;i<img.rows;i++){
-        for(int j=0;i<img.cols;j++){
+        for(int j=0;j<img.cols;j++){
             if(img.at<Vec3b>(i,j)[0]==255 && img.at<Vec3b>(i,j)[1]==255 && img.at<Vec3b>(i,j)[2]==255){
-                img.at<Vec3b>(i,j)[0]==0; //blue
-                img.at<Vec3b>(i,j)[1]==0; //green
-                img.at<Vec3b>(i,j)[2]==0; //red
+                img.at<Vec3b>(i,j)[0]=0; //blue
+                img.at<Vec3b>(i,j)[1]=0; //green
+                img.at<Vec3b>(i,j)[2]=0; //red
             }
         }
     }
