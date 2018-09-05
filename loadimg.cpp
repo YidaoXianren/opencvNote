@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     Mat img = imread("1.jpg", 1);
     if(img.empty())
        return -1;
+    //https://docs.opencv.org/2.4/modules/highgui/doc/user_interface.html
     namedWindow( "naruto", CV_WINDOW_AUTOSIZE );
     imshow("naruto", img);
     waitKey(0);
